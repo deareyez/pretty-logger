@@ -39,6 +39,7 @@ import java.util.List;
  */
 public class ReflectionLogger {
 
+
     /**
      * 간단한 부분에만.. 규모가 크면 퍼포먼스 책임 안짐..<br>
      * 빠를수도... 있고....<br><br><br><br><br>
@@ -48,6 +49,7 @@ public class ReflectionLogger {
      * @param obj logger 로 찍을 오브젝트..
      * @param tag logcat tag
      */
+    @Deprecated
     public static void prettyPrint(Object obj, String tag) {
         String text = getToString(obj, 0);
         Log.d(tag, text);
@@ -94,6 +96,7 @@ public class ReflectionLogger {
     /**
      * 퍼포먼스 조심... 진짜루..!!!!
      */
+    @Deprecated
     public static void prettyPrintLnThread(final Object obj, final String tag) {
 
         new Thread(new Runnable() {
